@@ -1,0 +1,31 @@
+CONFIG_NAME: 'bird_lstm_4aff_2_256'
+
+DATASET_NAME: 'birds'
+DATA_DIR: '../data/birds'
+
+GPU_ID: 0
+WORKERS: 8
+
+B_VALIDATION: False
+loss: 'hinge'
+
+TREE:
+    BRANCH_NUM: 1
+    BASE_SIZE: 256
+
+TRAIN:
+    NF: 64
+    BATCH_SIZE: 12
+    MAX_EPOCH: 600
+
+    SMOOTH:
+        GAMMA1: 5.0
+        GAMMA2: 5.0
+        GAMMA3: 10.0
+        LAMBDA: 1.0
+
+TEXT:
+    EMBEDDING_DIM: 256
+    CAPTIONS_PER_IMAGE: 10
+    DAMSM_NAME: '../bird/text_encoder200.pth'
+    DAMSM_IMGNAME: '../bird/image_encoder200.pth'

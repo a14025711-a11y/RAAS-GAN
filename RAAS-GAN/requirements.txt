@@ -1,0 +1,8 @@
+torch>=2.3
+torchvision>=0.18
+numpy
+Pillow
+easydict
+PyYAML
+pandas<3
+nltk
